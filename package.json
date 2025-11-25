@@ -6,7 +6,9 @@
   "scripts": {
     "build": "tsc --build",
     "start": "node dist/server.js",
-    "dev": "ts-node-dev --respawn --transpile-only src/server.ts"
+    "dev": "node --loader ts-node/esm src/server.ts",
+    "dev-server": "node --loader ts-node/esm src/server.ts",
+    "dev-worker": "node src/workers/videoProcessor.worker.cjs"
   },
   "keywords": [
     "express",
@@ -29,6 +31,7 @@
     "@types/fluent-ffmpeg": "^2.1.28",
     "axios": "^1.13.2",
     "bcrypt": "^6.0.0",
+    "body-parser": "^2.2.1",
     "bullmq": "^5.64.1",
     "cors": "^2.8.5",
     "deepagents": "^1.1.1",
@@ -47,6 +50,7 @@
   },
   "devDependencies": {
     "@types/bcrypt": "^6.0.0",
+    "@types/cors": "^2.8.19",
     "@types/express": "^4.17.25",
     "@types/jest": "^30.0.0",
     "@types/jsonwebtoken": "^9.0.10",
