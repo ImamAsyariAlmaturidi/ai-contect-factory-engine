@@ -1,0 +1,12 @@
+{
+  "name": "ai-content-factory-engine",
+  "version": "1.0.0",
+  "description": "An Express.js with TypeScript, for AI content factory engine",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "Imam A'syarinpm i express",
+  "license": "MIT"
+}
